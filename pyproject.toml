@@ -1,0 +1,19 @@
+[project]
+name = "promemoria-acqua"
+version = "1.0.0"
+description = "Demone leggero multipiattaforma (Linux & Windows) per notifiche desktop periodiche di idratazione"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+promemoria-acqua = "promemoria_acqua.cli:main"
+
+[tool.setuptools]
+packages = ["promemoria_acqua"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
