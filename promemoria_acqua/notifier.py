@@ -9,10 +9,17 @@ from pathlib import Path
 SCRIPT_PS1 = Path(__file__).resolve().parent / "Notifica_Desktop_Acqua.ps1"
 
 
+def _safe_print(text: str) -> None:
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        print(text.encode("ascii", errors="replace").decode("ascii"))
+
+
 def send_notification(title: str, message: str, dry_run: bool = False) -> bool:
     """Invia una notifica desktop nativa. Ritorna True se il comando è stato avviato con successo."""
     if dry_run:
-        print(f"[NOTIFICA] {title}: {message}")
+        _safe_print(f"[NOTIFICA] {title}: {message}")
         return True
 
     if sys.platform == "win32":
