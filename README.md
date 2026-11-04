@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/Linux%20%7C%20Windows-tested%20in%20CI-lightgrey)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Demone desktop leggero e **multipiattaforma (Linux & Windows)** in Python puro (zero dipendenze esterne) che invia una notifica di sistema periodica per ricordarti di bere acqua durante il lavoro al PC.
+Notifica **multipiattaforma (Linux & Windows)** in Python puro (zero dipendenze esterne) che invia una notifica di sistema periodica per ricordarti di bere acqua durante il lavoro al PC.
 
 *English: Zero-dependency cross-platform desktop reminder daemon (Linux `notify-send` & Windows 10/11 WinRT Toast Notifications via PowerShell) with single-instance OS mutex/flock protection and one-click autostart installers.*
 
